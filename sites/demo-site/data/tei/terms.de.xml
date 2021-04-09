@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.deutschestextarchiv.de/basisformat.rng"
+type="application/xml"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dtabf" xml:lang="de">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Nutzungsbedingungen</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Institut für die Geschichte der deutschen Juden</orgName>
+                    <email>redaktion@juedische-geschichte-online.net</email>
+                    <address><addrLine>Beim Schlump 83, 20144 Hamburg</addrLine></address>
+                </publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <date type="publication">2020-12-04</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/deed.de">
+                        <p>Dieser Text darf gemäß den Bestimmungen der <ref target="https://creativecommons.org/licenses/by-nc/4.0/deed.de">CC-BY-NC 4.0</ref> für nicht-kommerzielle Zwecke in jedwedem Format oder Medium vervielfältigt und weiterverbreitet werden.</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p></p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Diese Demo-Anwendung wurde vom <ref target="http://igdj-hh.de/">Institut für die Geschichte der deutschen Juden
+                (IGdJ)</ref> entwickelt.
+            </p>
+            <p>Der Quellcode steht <ref target="https://github.com/igdj/">auf GitHub</ref> zur Verfügung.</p>
+            <p>
+                Die Inhalte stammen aus den folgenden Open-Access Angeboten:
+                <list>
+                    <item><ref target="https://www.deutschestextarchiv.de/">Deutsches Textarchiv</ref> (<ref target="https://www.deutschestextarchiv.de/api/pnd/118559230">Suche nach Franz Kafka</ref>)</item>
+                    <item><ref target="https://de.wikisource.org/wiki/Franz_Kafka">Franz Kafka bei Wikisource, der freien Quellensammlung</ref></item>
+                </list>
+            </p>
+        </body>
+    </text>
+</TEI>

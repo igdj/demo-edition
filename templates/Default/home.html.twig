@@ -1,0 +1,82 @@
+{% extends '@TeiEdition/Default/base.html.twig' %}
+
+{% import '@TeiEdition/Shared/map-leaflet.html.twig' as map %}
+
+{% block head %}
+    {{ map.head() }}
+    {{ map.head_markercluster() }}
+{% endblock %}
+
+{% block contenttop %}
+{% embed '@TeiEdition/Default/contenttop_skeleton.html.twig' %}
+{% endembed %}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div id="col-main" class="col-sm-8">
+            <div class="container-fluid">
+                <h4>{{ 'Welcome'|trans }}</h4>
+                <div class="two-columns justify-hyphens">
+                    {% if 'en' == app.request.locale %}
+                        <p class="dta-p"><a href="{{ path('about') }}">About this edition...</a></p>
+                    {% else %}
+                        <p><a href="{{ path('about') }}">Informationen über diese Edition...</a></p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="container-fluid box">
+                <div class="row box-header map">
+                    <div class="col-sm-12">
+                        <h4><a href="{{ path('place-map') }}">{{ 'Map'|trans }}</a></h4>
+                    </div>
+                </div>
+                <div class="row box-content">
+                    <div id="map">
+                        <div id="map-container">
+                            <div id="map" style="width: 100%; min-height: 320px"></div>
+                            <script>
+                            $( document).ready(function () {
+                                showMap();
+                            });
+
+                            {{ map.showMap(bounds, markers) }}
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid box" style="margin-top: 2em">
+                <div class="row box-header chronology">
+                    <div class="col-sm-12">
+                        <h4><a href="{{ path('date-chronology') }}">{{ 'Chronology'|trans }}</a></h4>
+                    </div>
+                </div>
+                <div class="row box-content">
+                    <div id="chronology" data-url="{{ path('date-chronology-partial') }}" style="max-height: 320px; overflow-y: scroll; overflow-x: hidden">
+                        {{ 'Loading...' | trans }}
+                        <script>
+                            var chronologyLoaded = false;
+
+                            $( document).ready(function () {
+                                if (!chronologyLoaded) {
+                                    var pane = $( '#chronology' );
+                                    var url = pane.attr("data-url");
+
+                                    // ajax load from data-url
+                                    $( pane ).load(url,function(result){
+                                        chronologyLoaded = true;
+                                    });
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 sidebar">
+        </div>
+    </div>
+{% endblock %}

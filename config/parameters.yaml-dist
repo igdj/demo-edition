@@ -1,0 +1,80 @@
+parameters:
+    kernel.secret: YOUR_SECRET
+
+    # database.host might have to be changed to 127.0.0.1
+    # depending on your database setup
+    database.host:     localhost
+    database.port:     ~
+    database.name:     demo_edition
+    database.user:     root
+    database.password: ~
+    database.charset:   utf8mb4
+
+    jms_i18n_routing.hosts.de:  localhost
+    # demo-edition is monolingual, so the following
+    # is not needed
+    # jms_i18n_routing.hosts.en:  127.0.0.1
+
+    # if you want to send mails from the contact page
+    mailer.transport: 'sendmail'
+    # if you don't have sendmail configured, you can use a smtp-host instead
+    # mailer.transport: 'smtp'
+    mailer.host: ~
+    mailer.port: ~
+    mailer.username: ~
+    mailer.password: ~
+
+    # for testing (https://doi.test.datacite.org/), use
+    app.datacite.url: "https://mds.test.datacite.org/"
+    #app.datacite.url: "https://mds.datacite.org/"
+    app.datacite.user: YOUR.USER
+    app.datacite.password: "secret"
+    app.datacite.prefix: YOUR.PREFIX
+
+    # if you want to use a wordpress installation for news
+    # app.wp-rest.url: "http://your.site/wordpress/"
+    # app.wp-rest.user: wp-rest
+    # app.wp-rest.password: "secret"
+
+    # xslt settings
+    app.xslt.adapter.class: TeiEditionBundle\Utils\Xsl\XsltCommandlineAdapter
+    # linux
+    app.xslt.adapter.arguments: "/usr/bin/java -jar %kernel.project_dir%/bin/saxon9he.jar -s:%%source%% -xsl:%%xsl%%  %%additional%%"
+    # windows: set your proper path, e.g.
+    # app.xslt.adapter.arguments: "c:\\Run\\Java\\jdk1.8\\bin\\java -jar %kernel.project_dir%\\bin\\saxon9he.jar -s:%%source%% -xsl:%%xsl%% %%additional%%"
+
+    # if you have http://www.saxonica.com/saxon-c/index.xml correctly installed, you can set
+    # app.xslt.adapter.class:  TeiEditionBundle\Utils\Xsl\XsltSaxonProcessorAdapter
+    # app.xslt.adapter.arguments: ~
+
+    # xml format
+    app.xml_formatter.adapter.class: ~
+    # if you have perl installed, you can use
+    # app.xml_formatter.adapter.class:  TeiEditionBundle\Utils\XmlFormatter\XmlFormatterCommandlineAdapter
+    # either pretty printing for DTABf documents
+    # app.xml_formatter.adapter.arguments: "perl %kernel.project_dir%/bin/dtabfpp.pl %%source%% %%additional%%"
+    # or with http://www.kitebird.com/software/xmlformat/xmlformat.html
+    # if site is down, https://packages.ubuntu.com/bionic/xmlformat-perl points to
+    #   http://archive.ubuntu.com/ubuntu/pool/universe/x/xmlformat/xmlformat_1.04.orig.tar.gz
+    # app.xml_formatter.adapter.arguments: "perl %kernel.project_dir%/bin/xmlformat.pl --config=%kernel.project_dir%/app/Resources/bin/xf-tei.conf %%source%% %%additional%%"
+
+    # imagemagick settings
+    app.imagemagick.processor.arguments:
+        # on linux, check with
+        #   which convert -> /usr/bin/convert
+        path: "/usr/bin/"
+        # windows, set your proper path, e.g.
+        # path: "C:/Progra~1/ImageMagick-6.9.1-Q16/"
+
+    app.simplify_geojson.processor.arguments:
+        # linux, probably something like the following
+        path: "/usr/local/lib/node_modules"
+        # windows, set your proper path
+        # path: "c:/Users/USER/AppData/Roaming/npm/"
+
+    # activate a sylius-theme located in sites/
+    app.site_theme: 'igdj/demo-site'
+
+    twitter.site: ~ # keydocuments
+    piwik.site_id:  # 2
+    googleapis.key: YOUR-KEY

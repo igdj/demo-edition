@@ -1,0 +1,90 @@
+# config/services.yaml
+parameters:
+    app.pdf-generator.arguments:
+        fontDir: [ "%kernel.project_dir%/sites/demo-site/data/font" ]
+        fontdata:
+            book_typeface:
+                R: 'NotoSerif-Regular.ttf'
+                B: 'NotoSerif-Bold.ttf'
+                I: 'NotoSerif-Italic.ttf'
+                BI: 'NotoSerif-BoldItalic.ttf'
+        default_font: book_typeface
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $siteTheme: '%app.site_theme%'
+            $dbconnAdmin: '@dbconn.admin'
+            
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    # together with the above _defaults, this is needed for Command-classes to work as in Sf 3.4
+    App\:
+        resource: '%kernel.project_dir%/src'
+        exclude: '%kernel.project_dir%/src/{Entity,Migrations,Tests}'
+        
+    # makes classes in TeiEditionBundle available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    # TODO: expose this in bundle configuration: https://symfony.com/doc/current/bundles/extension.html
+    TeiEditionBundle\:
+        resource: '%kernel.project_dir%/vendor/igdj/tei-edition-bundle'
+        exclude: '%kernel.project_dir%/vendor/igdj/tei-edition-bundle/{Entity,Migrations,Tests}'
+
+    # override command in bundle, see https://stackoverflow.com/a/57107379
+    App\Command\ArticleRefreshCommand:
+        decorates: TeiEditionBundle\Command\ArticleRefreshCommand
+        
+    Twig\Extra\String\StringExtension:
+        tags:
+            - { name: twig.extension }
+
+    # language-specific layout in 404
+    App\EventListener\LanguageListener:
+        arguments: [ '%jms_i18n_routing.default_locale%', '%jms_i18n_routing.locales%', '@jms_i18n_routing.locale_resolver' ]
+        tags:
+          - { name: kernel.event_listener, event: kernel.exception, method: setLocale }
+
+    # theme selection
+    App\EventListener\ThemeRequestListener:
+        # arguments: ['@sylius.repository.theme', '@sylius.theme.context.settable']
+        tags:
+        - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+    # So we can inject @solr.client, see https://github.com/floriansemm/SolrBundle/issues/191#issuecomment-466101623
+    FS\SolrBundle\SolrInterface: '@solr.client'
+
+    TeiEditionBundle\Utils\ImageMagick\ImageMagickProcessor:
+        arguments:    [ "%app.imagemagick.processor.arguments%" ]
+        
+    app.xslt_adapter:
+        class:        "%app.xslt.adapter.class%"
+        arguments:    [ "%app.xslt.adapter.arguments%" ]
+    TeiEditionBundle\Utils\Xsl\XsltProcessor:
+        calls:
+            - [ setAdapter, [ '@app.xslt_adapter' ]]
+
+    app.xml_formatter_adapter:
+        class:        "%app.xml_formatter.adapter.class%"
+        arguments:    [ "%app.xml_formatter.adapter.arguments%" ]
+    TeiEditionBundle\Utils\XmlFormatter\XmlFormatter:
+        calls:
+            - [ setAdapter, [ '@app.xml_formatter_adapter' ]]
+
+    TeiEditionBundle\Utils\PdfGenerator:
+        arguments:    [ "%app.pdf-generator.arguments%" ]
+
+    TeiEditionBundle\Utils\SimplifyGeojsonProcessor:
+        arguments:    [ "%app.simplify_geojson.processor.arguments%" ]
+
+    App\Menu\Builder:
+        arguments: [ "@knp_menu.factory", "@translator.default", "@request_stack", "@router"  ]
+        tags:
+            # The alias is what is used to retrieve the menu
+            - { name: knp_menu.menu_builder, method: createTopMenu, alias: top }
+            - { name: knp_menu.menu_builder, method: createMainMenu, alias: main }
+            - { name: knp_menu.menu_builder, method: createBreadcrumbMenu, alias: breadcrumb }
+            - { name: knp_menu.menu_builder, method: createFooterMainMenu, alias: footer-main }

@@ -1,0 +1,167 @@
+imports:
+    - { resource: parameters.yaml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locales: [de]
+    default_locale: de  # for routing
+    fallback_locale: en # for translation
+    
+framework:
+    secret: '%kernel.secret%'
+    # JMS\TranslationBundle\JMSTranslationBundle needs validation
+    validation: ~
+    translator:
+        fallbacks: ['%fallback_locale%']
+        logging: false
+    form: ~
+    router:
+        utf8: true
+
+twig:
+    globals:
+        locales: "%locales%"
+        siteName: "kafka_ed"
+        siteTagline: "A Demo Edition"
+        slugify: "@cocur_slugify"
+        webDir: "%kernel.project_dir%/web"
+        piwikSiteId: "%piwik.site_id%"
+        twitterSite: "%twitter.site%"
+    form_themes:
+        - 'bootstrap_3_horizontal_layout.html.twig'
+    strict_variables: "%kernel.debug%"
+    exception_controller: null
+
+sylius_theme:
+    sources:
+        filesystem:
+            directories:
+                - "%kernel.project_dir%/sites" # changed from "%kernel.project_dir%/themes"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                host:     '%database.host%'
+                port:     '%database.port%'
+                dbname:   '%database.name%'
+                user:     '%database.user%'
+                password: '%database.password%'
+                #driver:  pdo_mysql
+                charset:  '%database.charset%' # UTF8
+                options:
+                        1002: "SET NAMES '%database.charset%' COLLATE '%database.charset%_unicode_ci'"
+                default_table_options:
+                    charset: '%database.charset%'
+                    collate: '%database.charset%_unicode_ci'
+                    engine:  MyISAM     # InnoDB
+    orm:
+        # TODO: set a cache, see http://www.craftitonline.com/2015/04/doctrine-file-system-caching-with-doctrine-cache-bundle/
+        connection: default        
+        auto_generate_proxy_classes: '%kernel.debug%'
+        auto_mapping: true
+        dql:
+            string_functions:
+                REPLACE: DoctrineExtensions\Query\Mysql\Replace
+                CAST:       Oro\ORM\Query\AST\Functions\Cast
+            datetime_functions:
+                YEAR:       DoctrineExtensions\Query\Mysql\Year
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            timestampable: true
+
+scssphp:
+    enabled: '%kernel.debug%'
+    autoUpdate: '%kernel.debug%'
+    assets:
+        "css/base.css":
+            src: "web/assets/scss/base.scss"
+            sourceMap: true
+            outputFolder: web
+            # Array of import paths, relative to Symfony's project directory.
+            importPaths:
+                - "sites/demo-site/assets/scss" # theme-specific settings come first
+                - "assets/scss"                 # generic fall-back
+
+jms_translation:
+    configs:
+        # so you can run ./bin/console translation:extract de --config=app
+        # see http://jmsyst.com/bundles/JMSTranslationBundle/master/cookbook/extraction_configs
+        app:
+            dirs: ["%kernel.project_dir%/templates", "%kernel.project_dir%/src"]
+            output_dir: "%kernel.project_dir%/translations"
+            extractors: [jms_i18n_routing]
+
+jms_i18n_routing:
+    default_locale: '%default_locale%'
+    locales: '%locales%'
+    strategy: custom
+    hosts:
+        de: '%jms_i18n_routing.hosts.de%'
+    redirect_to_host: true
+    
+knp_menu:
+    twig:
+        template: knp_menu.html.twig
+    #  if true, enables the helper for PHP templates
+    templating: false
+    # the renderer to use, list is also available by default
+    default_renderer: twig
+
+liip_url_auto_converter:
+    linkclass:
+    target: _blank
+    debugmode: false
+
+fs_solr:
+    endpoints:
+        core_de:
+            host: localhost
+            port: 8983
+            path: /
+            core: demo_de
+            timeout: 15
+            
+knp_paginator:
+    page_range: 5                      # default page range used in pagination control
+    default_options:
+        page_name: page                # page query parameter name
+        sort_field_name: sort          # sort field query parameter name
+        sort_direction_name: direction # sort direction query parameter name
+        #distinct: true                 # ensure distinct results, useful when ORM queries are using GROUP BY statements
+    template:
+        pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig'
+        sortable: '@KnpPaginator/Pagination:sortable_link.html.twig' # sort link template
+       
+eko_feed:
+    translation_domain: additional
+    feeds:
+        article:
+            title:       'kafka_ed - Articles'
+            description: 'Latest Articles from the Demo Edition'
+            link:
+                route_name: article-index-date
+            encoding:    'utf-8'
+            #author:      'Institute for the History of the German Jews'
+            
+swiftmailer:
+    # disable_delivery:  true
+    # delivery_address: daniel.burckhardt@sur-gmbh.ch
+    # or use: delivery_whitelist
+    transport: '%mailer.transport%'
+    host: '%mailer.host%'
+    port: '%mailer.port%'
+    username: '%mailer.username%'
+    password: '%mailer.password%'
+    encryption: ssl
+    # self-signed, see https://github.com/swiftmailer/swiftmailer/issues/544
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
+            verify_peer_name: false

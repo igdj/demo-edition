@@ -1,0 +1,28 @@
+imports:
+    - { resource: config.yaml }
+
+framework:
+    profiler:
+        enabled: true # true by default
+        only_exceptions: false
+
+web_profiler:
+    toolbar: true
+    intercept_redirects: false
+
+monolog:
+    handlers:
+#        doctrine:
+#            action_level: debug
+#            type: stream
+#            path: %kernel.logs_dir%/%kernel.environment%_doctrine.log
+#            channels: doctrine
+#        console:
+#            type:   console
+#            verbosity_levels:
+#                VERBOSITY_NORMAL: NOTICE # DEBUG
+        stream:
+            type: stream
+            # log to var/logs/(dev|prod).log
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: error

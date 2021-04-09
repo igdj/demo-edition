@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.deutschestextarchiv.de/basisformat.rng"
+type="application/xml"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dtabf">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Kontakt</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Institut für die Geschichte der deutschen Juden</orgName>
+                    <email>redaktion@juedische-geschichte-online.net</email>
+                    <address>
+                        <addrLine>Beim Schlump 83, 20144 Hamburg</addrLine>
+                    </address>
+                </publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <date type="publication">2020-12-04</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="deu">Deutsch</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div n="2">
+                <p>Bei Fragen und Anregungen zu dieser Anwendung freuen wir uns über eine E-Mail an
+                        <ref target="mailto:info@juedische-geschichte-online.net"
+                        >info@juedische-geschichte-online.net</ref></p>
+            </div>
+        </body>
+    </text>
+</TEI>

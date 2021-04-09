@@ -1,0 +1,36 @@
+# project specific
+/web/.htaccess
+/web/viewer/*
+!web/viewer/shared
+/sql
+
+# Cache, session files and logs (Symfony3)
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+!var/sessions/.gitkeep
+
+# Parameters
+/config/parameters.yaml
+
+# Managed by Composer
+/bin/*
+!bin/console
+/vendor/
+
+# Assets and user uploads
+/web/bundles/
+
+# Assets managed by Bower
+/web/assets/vendor/
+
+# PHPUnit
+/phpunit.xml
+
+# Build data
+/build/
+
+# Composer PHAR
+/composer.phar

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.deutschestextarchiv.de/basisformat.rng"
+type="application/xml"
+schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="dtabf">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Über uns</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Institut für die Geschichte der deutschen Juden</orgName>
+                    <email>redaktion@juedische-geschichte-online.net</email>
+                    <address>
+                        <addrLine>Beim Schlump 83, 20144 Hamburg</addrLine>
+                    </address>
+                </publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <date type="publication">2021-01-04</date>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                        <p>Dieser Text unterliegt den Bedingungen der Creative Commons Namensnennung
+                            - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz.
+                            Unter Namensnenung gemäß dem Zitationshinweis darf er in unveränderter
+                            Form für nicht-kommerzielle Zwecke nachgenutzt werden.</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="deu">Deutsch</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div n="2">
+                <p>Diese Anwendung demonstriert den Einsatz der für die Hamburger Schlüsseldokumente
+                    entwickelten nutzerfreundlichen Publikationsumgebung für <ref
+                        target="https://juedische-geschichte-online.net/ueber/technische-umsetzung"
+                        >TEI-basierte Quelleneditionen</ref>.</p>
+                <p>Der Quellcode steht <ref target="https://github.com/igdj/">auf GitHub</ref> zur Verfügung.</p>
+                <p>Die Entwicklung wurde von der <ref
+                        target="https://gepris.dfg.de/gepris/projekt/396810798?language=de"
+                        >Deutschen Forschungsgemeinschaft gefördert</ref>.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

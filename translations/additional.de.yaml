@@ -1,0 +1,9 @@
+# the following are from config.yaml
+# twig.globals.siteName
+kafka_ed: kafka_ed
+# twig.globals.siteTagline
+A Demo Edition: Eine Beispiel-Edition
+# eko_feed.feeds.article.title
+"kafka_ed - Articles": kafka_ed - Beiträge
+# eko_feed.feeds.article.description
+Latest Articles from the Demo Edition: Neuste Artikel in der Beispiel-Edition

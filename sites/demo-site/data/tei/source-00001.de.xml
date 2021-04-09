@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.deutschestextarchiv.de/basisformat.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Ein Hungerkünstler</title>
+                <author>
+                    <persName ref="http://d-nb.info/gnd/118559230">
+                        <surname>Kafka</surname>
+                        <forename>Franz</forename>
+                    </persName>
+                </author>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName ref="http://d-nb.info/gnd/1084139936">
+                        <surname>Geyken</surname>
+                        <forename>Alexander</forename>
+                    </persName>
+                </editor>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName ref="http://d-nb.info/gnd/1222198746">
+                        <surname>Haaf</surname>
+                        <forename>Susanne</forename>
+                    </persName>
+                </editor>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName ref="http://d-nb.info/gnd/1066714509">
+                        <surname>Jurish</surname>
+                        <forename>Bryan</forename>
+                    </persName>
+                </editor>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName>
+                        <surname>Boenig</surname>
+                        <forename>Matthias</forename>
+                    </persName>
+                </editor>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName>
+                        <surname>Thomas</surname>
+                        <forename>Christian</forename>
+                    </persName>
+                </editor>
+                <editor corresp="#DTACorpusPublisher">
+                    <persName>
+                        <surname>Wiegand</surname>
+                        <forename>Frank</forename>
+                    </persName>
+                </editor>
+                <respStmt>
+                    <orgName>Wikisource</orgName>
+                    <resp>
+                        <note type="remarkResponsibility">Bereitstellung der Texttranskription und
+                            Auszeichnung in Wikisource-Syntax.</note>
+                        <note type="remarkRevisionDTA">Bitte beachten Sie, dass die aktuelle
+                            Transkription (und Textauszeichnung) mittlerweile nicht mehr dem Stand
+                            zum Zeitpunkt der Übernahme aus Wikisource entsprechen muss.</note>
+                        <ref
+                            target="http://de.wikisource.org/wiki/Ein_Hungerk%C3%BCnstler_%281922%29"/>
+                        <date type="importDTA">2012-12-03T15:54:31Z</date>
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <orgName>Wikimedia Commons</orgName>
+                    <resp>
+                        <note type="remarkResponsibility">Bereitstellung der Bilddigitalisate</note>
+                        <ref
+                            target="http://commons.wikimedia.org/wiki/Category:De_Kafka_Erstdrucke_in_Zeitschriften"/>
+                        <date type="importDTA">2012-12-03T15:54:31Z</date>
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <persName>
+                        <forename>Frederike</forename>
+                        <surname>Neuber</surname>
+                    </persName>
+                    <resp>
+                        <note type="remarkResponsibility">Konvertierung von Wikisource-Markup nach
+                            XML/TEI gemäß DTA-Basisformat.</note>
+                        <date type="importDTA">2012-12-03T15:54:31Z</date>
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <orgName ref="https://www.bbaw.de">Berlin-Brandenburgische Akademie der
+                        Wissenschaften (BBAW)</orgName>
+                    <resp>
+                        <note type="remarkResponsibility">Langfristige Bereitstellung der
+                            DTA-Ausgabe</note>
+                        <ref target="https://www.bbaw.de"/>
+                    </resp>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>Vollständige digitalisierte Ausgabe.</edition>
+            </editionStmt>
+            <extent>
+                <measure type="images">10</measure>
+                <measure type="tokens">3428</measure>
+                <measure type="types">1276</measure>
+                <measure type="characters">23176</measure>
+            </extent>
+            <publicationStmt>
+                <publisher xml:id="DTACorpusPublisher">
+                    <email>dta@bbaw.de</email>
+                    <orgName role="project">Deutsches Textarchiv</orgName>
+                    <orgName role="hostingInstitution" xml:lang="eng">Berlin-Brandenburg Academy of
+                        Sciences and Humanities (BBAW)</orgName>
+                    <orgName role="hostingInstitution" xml:lang="deu">Berlin-Brandenburgische
+                        Akademie der Wissenschaften (BBAW)</orgName>
+                    <address>
+                        <addrLine>Jägerstr. 22/23, 10117 Berlin</addrLine>
+                        <country>Germany</country>
+                    </address>
+                </publisher>
+                <pubPlace>Berlin</pubPlace>
+                <date type="publication">2020-11-29T22:54:23Z</date>
+                <availability>
+                    <licence target="http://creativecommons.org/publicdomain/zero/1.0/">
+                        <p>Dieses Werk ist gemeinfrei.</p>
+                    </licence>
+                </availability>
+                <idno>
+                    <idno type="URLWeb"
+                        >http://www.deutschestextarchiv.de/kafka_hungerkuenstler_1922</idno>
+                    <idno type="URLXML"
+                        >http://www.deutschestextarchiv.de/book/download_xml/kafka_hungerkuenstler_1922</idno>
+                    <idno type="URLHTML"
+                        >http://www.deutschestextarchiv.de/book/download_html/kafka_hungerkuenstler_1922</idno>
+                    <idno type="URLText"
+                        >http://www.deutschestextarchiv.de/book/download_text/kafka_hungerkuenstler_1922</idno>
+                    <idno type="DTADirName">kafka_hungerkuenstler_1922</idno>
+                    <idno type="DTAID">source-1</idno>
+                    <idno type="URN">urn:nbn:de:kobv:b4-30171-1</idno>
+                </idno>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl type="MS">
+                    <author>Kafka, Franz</author><placeName ref="http://vocab.getty.edu/tgn/7003712">Berlin</placeName>, <date when="1922">1922</date>.
+                    <!--Kafka, Franz: Ein Hungerkünstler. Berlin, 1922.-->
+                </bibl>
+                <biblFull>
+                    <titleStmt>
+                        <title level="m" type="main">Ein Hungerkünstler</title>
+                        <author>
+                            <persName ref="http://d-nb.info/gnd/118559230">
+                                <surname>Kafka</surname>
+                                <forename>Franz</forename>
+                            </persName>
+                        </author>
+                    </titleStmt>
+                    <editionStmt>
+                        <edition n="1"/>
+                    </editionStmt>
+                    <publicationStmt>
+                        <publisher><name>S. Fischer Verlag</name></publisher>
+                        <pubPlace>Berlin</pubPlace>
+                        <date type="publication">1922</date>
+                    </publicationStmt>
+                    <seriesStmt>
+                        <title level="s" type="main">Die neue Rundschau</title>
+                        <biblScope unit="volume">Oktoberheft</biblScope>
+                    </seriesStmt>
+                </biblFull>
+                <msDesc>
+                    <msIdentifier> </msIdentifier>
+                    <physDesc>
+                        <typeDesc>
+                            <p>Antiqua</p>
+                        </typeDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>
+                    <![CDATA[
+<p>Anmerkungen zur Transkription:</p>
+<ul>
+<li>Als Grundlage dienen die <a href="http://de.wikisource.org/wiki/Wikisource:Editionsrichtlinien" title="Wikisource:Editionsrichtlinien">Wikisource:Editionsrichtlinien</a></li>
+</ul>
+]]>
+                </p>
+            </editorialDecl>
+            <tagsDecl>
+                <rendition scheme="css" xml:id="aq">font-family:sans-serif</rendition>
+                <rendition scheme="css" xml:id="b">font-weight:bold</rendition>
+                <rendition scheme="css" xml:id="blue">color:blue</rendition>
+                <rendition scheme="css" xml:id="c">display:block; text-align:center</rendition>
+                <rendition scheme="css" xml:id="et">display:block; margin-left:2em;
+                    text-indent:0</rendition>
+                <rendition scheme="css" xml:id="et2">display:block; margin-left:4em;
+                    text-indent:0</rendition>
+                <rendition scheme="css" xml:id="et3">display:block; margin-left:6em;
+                    text-indent:0</rendition>
+                <rendition scheme="css" xml:id="f">border:1px dotted silver</rendition>
+                <rendition scheme="css" xml:id="fr">border:1px dotted silver</rendition>
+                <rendition scheme="css" xml:id="g">letter-spacing:0.125em</rendition>
+                <rendition scheme="css" xml:id="i">font-style:italic</rendition>
+                <rendition scheme="css" xml:id="in">font-size:150%</rendition>
+                <rendition scheme="css" xml:id="k">font-variant:small-caps</rendition>
+                <rendition scheme="css" xml:id="larger">font-size:larger</rendition>
+                <rendition scheme="css" xml:id="red">color:red</rendition>
+                <rendition scheme="css" xml:id="right">display:block; text-align:right</rendition>
+                <rendition scheme="css" xml:id="s">text-decoration:line-through</rendition>
+                <rendition scheme="css" xml:id="smaller">font-size:smaller</rendition>
+                <rendition scheme="css" xml:id="sub">vertical-align:sub; font-size:.7em</rendition>
+                <rendition scheme="css" xml:id="sup">vertical-align:super;
+                    font-size:.7em</rendition>
+                <rendition scheme="css" xml:id="u">text-decoration:underline</rendition>
+                <rendition scheme="css" xml:id="uu">border-bottom:double 3px #000</rendition>
+            </tagsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <!--
+                <language xml:lang="deu" ident="deu">(Früh-)Neuhochdeutsch</language>
+                <language xml:lang="eng" ident="deu">German</language>
+                -->
+                <language ident="deu">Deutsch</language>
+            </langUsage>
+            <textClass>
+                <classCode scheme="http://juedische-geschichte-online.net/doku/#genre"
+                    >Quelle:Text</classCode>
+                <!--
+                <classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main"
+                    >Belletristik</classCode>
+                <classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub"
+                    >Prosa</classCode>
+                <classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus"
+                    >ready</classCode>
+                <classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus"
+                    >wikisource</classCode>
+                    -->
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <pb facs="#f0001" n="[983]"/>
+        <body>
+            <div n="1">
+                <head><hi rendition="#b">EIN HUNGERKÜNSTLER</hi><lb/>
+                     Erzählung von<lb/>
+                     FRANZ KAFKA </head>
+                <p><hi rendition="#in">I</hi>n den letzten Jahrzehnten ist das Interesse an
+                    Hungerkünstlern sehr zurückgegangen. Während es sich früher gut lohnte, große
+                    derartige Vorführungen in eigener Regie zu veranstalten, ist dies heute völlig
+                    unmöglich. Es waren andere Zeiten. Damals beschäftigte sich die ganze Stadt mit
+                    dem Hungerkünstler; von Hungertag zu Hungertag stieg die Teilnahme; jeder wollte
+                    den Hungerkünstler zumindest einmal täglich sehn; an den spätern Tagen gab es
+                    Abonnenten, welche tagelang vor dem kleinen Gitterkäfig saßen; auch in der Nacht
+                    fanden Besichtigungen statt, zur Erhöhung der Wirkung bei Fackelschein; an
+                    schönen Tagen wurde der Käfig ins Freie getragen, und nun waren es besonders die
+                    Kinder, denen der Hungerkünstler gezeigt wurde; während er für die Erwachsenen
+                    oft nur ein Spaß war, an dem sie der Mode halber teilnahmen, sahen die Kinder
+                    staunend, mit offenem Mund, der Sicherheit halber einander bei der Hand haltend,
+                    zu, wie er bleich, im schwarzen Trikot, mit mächtig vortretenden Rippen, sogar
+                    einen Sessel verschmähend, auf hingestreutem Stroh saß, einmal höflich nickend,
+                    angestrengt lächelnd Fragen beantwortete, auch durch
+                    <pb facs="#f0002" n="984"/>
+                     das Gitter den Arm streckte, um seine Magerkeit befühlen zu lassen, dann aber
+                    wieder ganz in sich selbst versank, um niemanden sich kümmerte, nicht einmal um
+                    den für ihn so wichtigen Schlag der Uhr, die das einzige Möbelstück des Käfigs
+                    war, sondern nur vor sich hinsah mit fast geschlossenen Augen und hie und da aus
+                    einem winzigen Gläschen Wasser nippte, um sich die Lippen zu feuchten.</p>
+                <p>Außer den wechselnden Zuschauern waren auch ständige, vom Publikum gewählte
+                    Wächter da, merkwürdigerweise gewöhnlich Fleischhauer, welche, immer drei
+                    gleichzeitig, die Aufgabe hatten, Tag und Nacht den Hungerkünstler zu
+                    beobachten, damit er nicht etwa auf irgendeine heimliche Weise doch Nahrung zu
+                    sich nehme. Es war das aber lediglich eine Formalität, eingeführt zur Beruhigung
+                    der Massen, denn die Eingeweihten wußten wohl, daß der Hungerkünstler während
+                    der Hungerzeit niemals, unter keinen Umständen, selbst unter Zwang nicht, auch
+                    das Geringste nur gegessen hätte; die Ehre seiner Kunst verbot dies. Freilich,
+                    nicht jeder Wächter konnte das begreifen, es fanden sich manchmal nächtliche
+                    Wachgruppen, welche die Bewachung sehr lax durchführten, absichtlich in eine
+                    ferne Ecke sich zusammensetzten und dort sich ins Kartenspiel vertieften, in der
+                    offenbaren Absicht, dem Hungerkünstler eine kleine Erfrischung zu gönnen, die er
+                    ihrer Meinung nach aus irgendwelchen geheimen Vorräten hervorholen konnte.
+                    Nichts war dem Hungerkünstler quälender als solche Wächter; sie machten ihn
+                    trübselig; sie machten ihm das Hungern entsetzlich schwer; manchmal überwand er
+                    seine Schwäche und sang während dieser Wachzeit, solange er es nur aushielt, um
+                    den Leuten zu zeigen, wie ungerecht sie ihn verdächtigten. Doch half das wenig;
+                    sie wunderten sich dann nur über seine Geschicklichkeit, selbst während des
+                    Singens zu essen. Viel lieber waren ihm die Wächter, welche sich eng zum Gitter
+                    setzten, mit der trüben Nachtbeleuchtung des Saales sich nicht begnügten,
+                    sondern ihn mit den elektrischen Taschenlampen bestrahlten, die ihnen der
+                    Impresario zur Verfügung stellte. Das grelle Licht störte ihn gar nicht,
+                    schlafen konnte er ja überhaupt nicht und ein wenig hindämmern konnte er immer,
+                    bei jeder Beleuchtung und zu jeder Stunde, auch im übervollen, lärmenden Saal.
+                    Er war sehr gerne bereit, mit solchen Wächtern die Nacht gänzlich ohne Schlaf zu
+                    verbringen; er war bereit, mit ihnen zu scherzen, ihnen Geschichten aus seinem
+                    Wanderleben zu erzählen, dann wieder ihre Erzählungen anzuhören, alles nur um
+                    sie wachzuhalten, um ihnen immer wieder zeigen zu können, daß
+                    <pb facs="#f0003" n="985"/>
+                     er nichts Eßbares im Käfig hatte und daß er hungerte, wie keiner von ihnen es
+                    könnte. Am glücklichsten aber war er, wenn dann der Morgen kam, und ihnen auf
+                    seine Rechnung ein überreiches Frühstück gebracht wurde, auf das sie sich warfen
+                    mit dem Appetit gesunder Männer nach einer mühevoll durchwachten Nacht. Es gab
+                    zwar sogar Leute, die in diesem Frühstück eine ungebührliche Beeinflussung der
+                    Wächter sehen wollten, aber das ging doch zu weit, und wenn man sie fragte, ob
+                    etwa sie nur um der Sache willen ohne Frühstück die Nachtwache übernehmen
+                    wollten, verzogen sie sich, aber bei ihren Verdächtigungen blieben sie
+                    dennoch.</p>
+                <p>Dieses allerdings gehörte schon zu den vom Hungern überhaupt nicht zu trennenden
+                    Verdächtigungen. Niemand war ja imstande, alle die Tage und Nächte beim
+                    Hungerkünstler ununterbrochen als Wächter zu verbringen, niemand also konnte aus
+                    eigener Anschauung wissen, ob wirklich ununterbrochen, fehlerlos gehungert
+                    worden war; nur der Hungerkünstler selbst konnte das wissen, nur er also
+                    gleichzeitig der von seinem Hungern vollkommen befriedigte Zuschauer sein. Er
+                    aber war wieder aus einem andern Grunde niemals befriedigt; vielleicht war er
+                    gar nicht vom Hungern so sehr abgemagert, daß manche zu ihrem Bedauern den
+                    Vorführungen fern bleiben mußten, weil sie seinen Anblick nicht ertrugen,
+                    sondern er war nur so abgemagert aus Unzufriedenheit mit sich selbst. Er allein
+                    nämlich wußte, auch kein Eingeweihter sonst wußte das, wie leicht das Hungern
+                    war. Es war die leichteste Sache von der Welt. Er verschwieg es auch nicht, aber
+                    man glaubte ihm nicht, hielt ihn günstigstenfalls für bescheiden, meist aber für
+                    reklamesüchtig oder gar für einen Schwindler, dem das Hungern allerdings leicht
+                    war, weil er es sich leicht zu machen verstand, und der auch noch die Stirn
+                    hatte, es halb zu gestehn. Das alles mußte er hinnehmen, hatte sich auch im
+                    Laufe der Jahre daran gewöhnt, aber innerlich nagte diese Unbefriedigtheit immer
+                    an ihm, und noch niemals, nach keiner Hungerperiode &#x2013; dieses Zeugnis
+                    mußte man ihm ausstellen &#x2013; hatte er freiwillig den Käfig verlassen. Als
+                    Höchstzeit für das Hungern hatte der Impresario vierzig Tage festgesetzt,
+                    darüber hinaus ließ er niemals hungern, auch in den Weltstädten nicht, und zwar
+                    aus gutem Grund. Vierzig Tage etwa konnte man erfahrungsgemäß durch allmählich
+                    sich steigernde Reklame das Interesse einer Stadt immer mehr aufstacheln, dann
+                    aber versagte das Publikum, eine wesentliche Abnahme des Zuspruches war
+                    festzustellen; es bestanden natürlich in dieser Hinsicht
+                    <pb facs="#f0004" n="986"/>
+                     kleine Unterschiede zwischen den Städten und Ländern, als Regel aber galt, daß
+                    vierzig Tage die Höchstzeit war. Dann also am vierzigsten Tage wurde die Tür des
+                    mit Blumen umkränzten Käfigs geöffnet, eine begeisterte Zuschauerschaft erfüllte
+                    das Amphitheater, eine Militärkapelle spielte, zwei Ärzte betraten den Käfig, um
+                    die nötigen Messungen am Hungerkünstler vorzunehmen, durch ein Megaphon wurden
+                    die Resultate dem Saale verkündet, und schließlich kamen zwei junge Damen,
+                    glücklich darüber, daß gerade sie ausgelost worden waren, und wollten den
+                    Hungerkünstler aus dem Käfig ein paar Stufen hinabführen, wo auf einem kleinen
+                    Tischchen eine sorgfältig ausgewählte Krankenmahlzeit serviert war. Und in
+                    diesem Augenblick wehrte sich der Hungerkünstler immer. Zwar legte er noch
+                    freiwillig seine Knochenarme in die hilfsbereit ausgestreckten Hände der zu ihm
+                    hinabgebeugten Damen, aber aufstehen wollte er nicht. Warum jetzt gerade nach
+                    vierzig Tagen aufhören? Er hätte es noch lange, unbeschränkt lange ausgehalten;
+                    warum gerade jetzt aufhören, wo er im besten, ja noch nicht einmal im besten
+                    Hungern war? Warum wollte man ihn des Ruhmes berauben, weiter zu hungern, nicht
+                    nur der größte Hungerkünstler aller Zeiten zu werden, der er ja wahrscheinlich
+                    schon war, aber auch noch sich selbst zu übertreffen bis ins Unbegreifliche,
+                    denn für seine Fähigkeit zu hungern fühlte er keine Grenzen. Warum hatte diese
+                    Menge, die ihn so sehr zu bewundern vorgab, so wenig Geduld mit ihm; wenn er es
+                    aushielt, noch weiter zu hungern, warum wollte sie es nicht aushalten? Auch war
+                    er müde, saß gut im Stroh und sollte sich nun hoch und lang aufrichten und zu
+                    dem Essen gehn, das ihm schon allein in der Vorstellung Übelkeiten verursachte,
+                    deren Äußerung er nur mit Rücksicht auf die Damen mühselig unterdrückte. Und er
+                    blickte empor in die Augen der scheinbar so freundlichen, in Wirklichkeit so
+                    grausamen Damen und schüttelte den auf dem schwachen Halse überschweren Kopf.
+                    Aber dann geschah, was immer geschah. Der Impresario kam, hob stumm &#x2013; die
+                    Musik machte das Reden unmöglich &#x2013; die Arme über dem Hungerkünstler, so,
+                    als lade er den Himmel ein, sich sein Werk hier auf dem Stroh einmal anzusehn,
+                    diesen bedauernswerten Märtyrer, welcher der Hungerkünstler allerdings war, nur
+                    in ganz anderem Sinn; faßte den Hungerkünstler um die dünne Taille, wobei er
+                    durch übertriebene Vorsicht glaubhaft machen wollte, mit einem wie gebrechlichen
+                    Ding er es hier zu tun habe; und übergab ihn &#x2013; nicht ohne ihn im geheimen
+                    ein wenig zu schütteln, so daß der
+                    <pb facs="#f0005" n="987"/>
+                     Hungerkünstler mit den Beinen und dem Oberkörper unbeherrscht hin und her
+                    schwankte &#x2013; den inzwischen totenbleich gewordenen Damen. Nun duldete der
+                    Hungerkünstler alles; der Kopf lag auf der Brust, es war, als sei er hingerollt
+                    und halte sich dort unerklärlich; der Leib war ausgehöhlt; die Beine drückten
+                    sich im Selbsterhaltungstrieb fest in den Knien aneinander, scharrten aber doch
+                    den Boden, so als sei es nicht der wirkliche, den wirklichen suchten sie erst;
+                    und die ganze, allerdings sehr kleine Last des Körpers lag auf einer der Damen,
+                    welche hilfesuchend, mit fliegendem Atem &#x2013; so hatte sie sich dieses
+                    Ehrenamt nicht vorgestellt &#x2013; zuerst den Hals möglichst streckte, um
+                    wenigstens das Gesicht vor der Berührung mit dem Hungerkünstler zu bewahren,
+                    dann aber, da ihr dies nicht gelang und ihre glücklichere Gefährtin ihr nicht zu
+                    Hilfe kam, sondern sich damit begnügte, zitternd die Hand des Hungerkünstlers,
+                    dieses kleine Knochenbündel, vor sich herzutragen, unter dem entzückten
+                    Gelächter des Saales in Weinen ausbrach und von einem längst bereitgestellten
+                    Diener abgelöst werden mußte. Dann kam das Essen, von dem der Impresario dem
+                    Hungerkünstler während eines ohnmachtähnlichen Halbschlafes ein wenig einflößte,
+                    unter lustigem Plaudern, das die Aufmerksamkeit vom Zustand des Hungerkünstlers
+                    ablenken sollte; dann wurde noch ein Trinkspruch auf das Publikum ausgebracht,
+                    welcher dem Impresario angeblich vom Hungerkünstler zugeflüstert worden war; das
+                    Orchester bekräftigte alles durch einen großen Tusch, man ging auseinander, und
+                    niemand hatte das Recht, mit dem Gesehenen unzufrieden zu sein, niemand, nur der
+                    Hungerkünstler, immer nur er.</p>
+                <p>So lebte er mit regelmäßigen kleinen Ruhepausen viele Jahre, in scheinbarem
+                    Glanz, von der Welt geehrt, bei alledem aber meist in trüber Laune, die immer
+                    noch trüber wurde dadurch, daß niemand sie ernst zu nehmen verstand. Womit
+                    sollte man ihn auch trösten? Was blieb ihm zu wünschen übrig? Und wenn sich
+                    einmal ein Gutmütiger fand, der ihn bedauerte und ihm erklären wollte, daß seine
+                    Traurigkeit wahrscheinlich von dem Hungern käme, konnte es, besonders bei
+                    vorgeschrittener Hungerzeit, geschehn, daß der Hungerkünstler mit einem
+                    Wutausbruch antwortete und zum Schrecken aller wie ein Tier an dem Gitter zu
+                    rütteln begann. Doch hatte für solche Zustände der Impresario ein Strafmittel,
+                    das er gern anwandte. Er entschuldigte den Hungerkünstler vor versammeltem
+                    Publikum, gab zu,
+                    <pb facs="#f0006" n="988"/>
+                     daß nur die durch das Hungern hervorgerufene, für satte Menschen nicht ohne
+                    weiteres begreifliche Reizbarkeit das Benehmen des Hungerkünstlers verzeihlich
+                    machen könne; kam dann im Zusammenhang damit auch auf die ebenso zu erklärende
+                    Behauptung des Hungerkünstlers zu sprechen, er könnte noch viel länger hungern,
+                    als er hungere; lobte das hohe Streben, den guten Willen, die große
+                    Selbstverleugnung, die gewiß auch in dieser Behauptung enthalten seien; suchte
+                    dann aber die Behauptung einfach genug durch Vorzeigen von Photographien, die
+                    gleichzeitig verkauft wurden, zu widerlegen, denn auf den Bildern sah man den
+                    Hungerkünstler an einem vierzigsten Hungertag, im Bett, fast verlöscht vor
+                    Entkräftung. Diese dem Hungerkünstler zwar wohlbekannte, immer aber von neuem
+                    ihn entnervende Verdrehung der Wahrheit war ihm zuviel. Was die Folge der
+                    vorzeitigen Beendigung des Hungerns war, stellte man hier als die Ursache dar!
+                    Gegen diesen Unverstand, gegen diese Welt des Unverstandes zu kämpfen, war
+                    unmöglich. Noch hatte er immer wieder in gutem Glauben begierig am Gitter dem
+                    Impresario zugehört, beim Erscheinen der Photographien aber ließ er das Gitter
+                    jedesmal los, sank mit Seufzen ins Stroh zurück, und das beruhigte Publikum
+                    konnte wieder herankommen und ihn besichtigen.</p>
+                <p>Wenn die Zeugen solcher Szenen ein paar Jahre später daran zurückdachten, wurden
+                    sie sich oft selbst unverständlich. Denn inzwischen war jener erwähnte Umschwung
+                    eingetreten; fast plötzlich war das geschehen; es mochte tiefere Gründe haben,
+                    aber wem lag daran, sie aufzufinden; jedenfalls sah sich eines Tages der
+                    verwöhnte Hungerkünstler von der vergnügungssüchtigen Menge verlassen, die
+                    lieber zu anderen Schaustellungen strömte. Noch einmal jagte der Impresario mit
+                    ihm durch halb Europa, um zu sehn, ob sich nicht noch hie und da das alte
+                    Interesse wiederfände; alles vergeblich; wie in einem geheimen Einverständnis
+                    hatte sich überall geradezu eine Abneigung gegen das Schauhungern ausgebildet.
+                    Natürlich hatte das in Wirklichkeit nicht plötzlich so kommen können, und man
+                    erinnerte sich jetzt nachträglich an manche zu ihrer Zeit im Rausch der Erfolge
+                    nicht genügend beachtete, nicht genügend unterdrückte Vorboten, aber jetzt etwas
+                    dagegen zu unternehmen, war zu spät. Zwar war es sicher, daß einmal auch für das
+                    Hungern wieder die Zeit kommen werde, aber für die Lebenden war das kein Trost.
+                    Was sollte nun der Hungerkünstler tun? Der, welchen Tausende umjubelt hatten,
+                    konnte sich nicht in Schaubuden auf kleinen Jahrmärkten zeigen, und um einen
+                    <pb facs="#f0007" n="989"/>
+                     andern Beruf zu ergreifen, war der Hungerkünstler nicht nur zu alt, sondern vor
+                    allem dem Hungern allzu fanatisch ergeben. So verabschiedete er denn den
+                    Impresario, den Genossen einer Laufbahn ohnegleichen, und ließ sich von einem
+                    großen Zirkus schnell engagieren; um seine Empfindlichkeit zu schonen, sah er
+                    die Vertragsbedingungen gar nicht an.</p>
+                <p>Ein großer Zirkus mit seiner Unzahl von einander immer wieder ausgleichenden und
+                    ergänzenden Menschen und Tieren und Apparaten kann jeden und zu jeder Zeit
+                    gebrauchen, auch einen Hungerkünstler, bei entsprechend bescheidenen Ansprüchen
+                    natürlich, und außerdem war es ja in diesem besonderen Fall nicht nur der
+                    Hungerkünstler selbst, der engagiert wurde, sondern auch sein alter berühmter
+                    Name, ja man konnte bei der Eigenart dieser im zunehmenden Alter nicht
+                    abnehmenden Kunst nicht einmal sagen, daß ein ausgedienter, nicht mehr auf der
+                    Höhe seines Könnens stehender Künstler sich in einen ruhigen Zirkusposten
+                    flüchten wolle, im Gegenteil, der Hungerkünstler versicherte, daß er, was
+                    durchaus glaubwürdig war, eben so gut hungere wie früher, ja er behauptete
+                    sogar, er werde, wenn man ihm seinen Willen lasse, und dies versprach man ihm
+                    ohne weiteres, eigentlich erst jetzt die Welt in berechtigtes Erstaunen setzen,
+                    eine Behauptung allerdings, die mit Rücksicht auf die Zeitstimmung, welche der
+                    Hungerkünstler im Eifer leicht vergaß bei den Fachleuten nur ein Lächeln
+                    hervorrief.</p>
+                <p>Im Grunde aber verlor auch der Hungerkünstler den Blick für die wirklichen
+                    Verhältnisse nicht und nahm es als selbstverständlich hin, daß man ihn mit
+                    seinem Käfig nicht etwa als Glanznummer mitten in die Manege stellte, sondern
+                    draußen an einem im übrigen recht gut zugänglichen Ort in der Nähe der
+                    Stallungen unterbrachte. Große, bunt gemalte Aufschriften umrahmten den Käfig
+                    und verkündeten, was dort zu sehen war. Wenn das Publikum in den Pausen der
+                    Vorstellung zu den Ställen drängte, um die Tiere zu besichtigen, war es fast
+                    unvermeidlich, daß es beim Hungerkünstler vorüberkam und ein wenig dort
+                    haltmachte, man wäre vielleicht länger bei ihm geblieben, wenn nicht in dem
+                    schmalen Gang die Nachdrängenden, welche diesen Aufenthalt auf dem Weg zu den
+                    ersehnten Ställen nicht verstanden, eine längere ruhige Betrachtung unmöglich
+                    gemacht hätten. Dieses war auch der Grund, warum der Hungerkünstler vor diesen
+                    Besuchszeiten, die er als seinen Lebenszweck natürlich herbeiwünschte, doch auch
+                    wieder zitterte. In der ersten Zeit hatte er die Vorstellungspausen
+                    <pb facs="#f0008" n="990"/>
+                     kaum erwarten können; entzückt hatte er der sich heranwälzenden Menge
+                    entgegengesehn, bis er sich nur zu bald &#x2013; auch die hartnäckigste, fast
+                    bewußte Selbsttäuschung hielt den Erfahrungen nicht stand &#x2013; davon
+                    überzeugte, daß es zumeist der Absicht nach, immer wieder, ausnahmslos, lauter
+                    Stallbesucher waren. Und dieser Anblick von der Ferne blieb noch immer der
+                    schönste. Denn wenn sie bis zu ihm herangekommen waren, umtobte ihn sofort
+                    Geschrei und Schimpfen der ununterbrochen neu sich bildenden Parteien, jener,
+                    welche &#x2013; sie wurde dem Hungerkünstler bald die peinlichere &#x2013; ihn
+                    bequem ansehen wollte, nicht etwa aus Verständnis, sondern aus Laune und Trotz,
+                    und jener zweiten, die zunächst nur nach den Ställen verlangte. War der große
+                    Haufe vorüber, dann kamen die Nachzügler, und diese allerdings, denen es nicht
+                    mehr verwehrt war, stehen zu bleiben, solange sie nur Lust hatten, eilten mit
+                    langen Schritten, fast ohne Seitenblick, vorüber, um rechtzeitig zu den Tieren
+                    zu kommen. Und es war kein allzu häufiger Glücksfall, daß ein Familienvater mit
+                    seinen Kindern kam, mit dem Finger auf den Hungerkünstler zeigte, ausführlich
+                    erklärte, um was es sich hier handelte, von früheren Jahren erzählte, wo er bei
+                    ähnlichen, aber unvergleichlich großartigeren Vorführungen gewesen war, und dann
+                    die Kinder, wegen ihrer ungenügenden Vorbereitung von Schule und Leben her, zwar
+                    immer noch verständnislos blieben &#x2013; was war ihnen Hungern? &#x2013; aber
+                    doch in dem Glanz ihrer forschenden Augen etwas von neuen, kommenden, gnädigeren
+                    Zeiten verrieten. Vielleicht, so sagte sich der Hungerkünstler dann manchmal,
+                    würde alles doch ein wenig besser werden, wenn sein Standort nicht gar so nahe
+                    bei den Ställen wäre. Den Leuten wurde dadurch die Wahl zu leicht gemacht, nicht
+                    zu reden davon, daß ihn die Ausdünstungen der Ställe, die Unruhe der Tiere in
+                    der Nacht, das Vorübertragen der rohen Fleischstücke für die Raubtiere, die
+                    Schreie bei der Fütterung sehr verletzten und dauernd bedrückten. Aber bei der
+                    Direktion vorstellig zu werden, wagte er nicht; immerhin verdankte er ja den
+                    Tieren die Menge der Besucher, unter denen sich hie und da auch ein für ihn
+                    Bestimmter finden konnte, und wer wußte, wohin man ihn verstecken würde, wenn er
+                    an seine Existenz erinnern wollte und damit auch daran, daß er, genau genommen,
+                    nur ein Hindernis auf dem Weg zu den Ställen war.</p>
+                <p>Ein kleines Hindernis allerdings, ein immer kleiner werdendes Hindernis. Man
+                    gewöhnte sich an die Sonderbarkeit, in den heutigen Zeiten Aufmerksamkeit für
+                    einen Hungerkünstler beanspruchen zu
+                    <pb facs="#f0009" n="991"/>
+                     wollen, und mit dieser Gewöhnung war das Urteil über ihn gesprochen. Er mochte
+                    so gut hungern, als er nur konnte, und er tat es, aber nichts konnte ihn mehr
+                    retten, man ging an ihm vorüber. Versuche, jemandem die Hungerkunst zu erklären!
+                    Wer es nicht fühlt, dem kann man es nicht begreiflich machen. Die schönen
+                    Aufschriften wurden schmutzig und unleserlich, man riß sie herunter, niemandem
+                    fiel es ein, sie zu ersetzen; das Täfelchen mit der Ziffer der abgeleisteten
+                    Hungertage, das in der ersten Zeit sorgfältig täglich erneut worden war, blieb
+                    schon längst immer das gleiche, denn nach den ersten Wochen war das Personal
+                    selbst dieser kleinen Arbeit überdrüssig geworden; und so hungerte zwar der
+                    Hungerkünstler weiter, wie er es früher einmal erträumt hatte, und es gelang ihm
+                    ohne Mühe ganz so, wie er es damals vorausgesagt hatte, aber niemand zählte die
+                    Tage, niemand, nicht einmal der Hungerkünstler selbst wußte, wie groß die
+                    Leistung schon war, und sein Herz wurde schwer. Und wenn einmal in der Zeit ein
+                    Müßiggänger stehen blieb, sich über die alte Ziffer lustig machte und von
+                    Schwindel sprach, so war das in diesem Sinn die dümmste Lüge, welche
+                    Gleichgültigkeit und eingeborene Bösartigkeit erfinden konnte, denn nicht der
+                    Hungerkünstler betrog, er arbeitete ehrlich, aber die Welt betrog ihn um seinen
+                    Lohn.</p>
+                <p>Doch vergingen wieder viele Tage, und auch das nahm ein Ende. Einmal fiel einem
+                    Aufseher der Käfig auf, und er fragte die Diener, warum man hier diesen gut
+                    brauchbaren Käfig mit dem verfaulten Stroh drinnen unbenützt stehen lasse;
+                    niemand wußte es, bis sich einer mit Hilfe der Ziffertafel an den Hungerkünstler
+                    erinnerte. Man rührte mit Stangen das Stroh auf und fand den Hungerkünstler
+                    darin. &#x201E;Du hungerst noch immer?&#x201C; fragte der Aufseher, &#x201E;wann
+                    wirst du denn endlich aufhören?&#x201C; &#x201E;Verzeiht mir alle&#x201C;,
+                    flüsterte der Hungerkünstler; nur der Aufseher, der das Ohr ans Gitter hielt,
+                    verstand ihn. &#x201E;Gewiß,&#x201C; sagte der Aufseher und legte den Finger an
+                    die Stirn, um damit den Zustand des Hungerkünstlers dem Personal anzudeuten,
+                    &#x201E;wir verzeihen dir.&#x201C; &#x201E;Immerfort wollte ich, daß ihr mein
+                    Hungern bewundert&#x201C;, sagte der Hungerkünstler. &#x201E;Wir bewundern es
+                    auch&#x201C;, sagte der Aufseher entgegenkommend. &#x201E;Ihr sollt es aber
+                    nicht bewundern&#x201C;, sagte der Hungerkünstler. &#x201E;Nun, dann bewundern
+                    wir es also nicht,&#x201C; sagte der Aufseher, &#x201E;warum sollen wir es denn
+                    nicht bewundern?&#x201C; &#x201E;Weil ich hungern muß, ich kann nicht
+                    anders&#x201C;, sagte
+                    <pb facs="#f0010" n="992"/>
+                     der Hungerkünstler. &#x201E;Da sieh mal einer,&#x201C; sagte der Aufseher,
+                    &#x201E;warum kannst du denn nicht anders?&#x201C; &#x201E;Weil ich,&#x201C;
+                    sagte der Hungerkünstler, hob das Köpfchen ein wenig und sprach mit wie zum Kuß
+                    gespitzten Lippen gerade in das Ohr des Aufsehers hinein, damit nichts verloren
+                    ginge, &#x201E;weil ich nicht die Speise finden konnte, die mir schmeckt. Hätte
+                    ich sie gefunden, glaube mir, ich hätte kein Aufsehen gemacht und mich
+                    vollgegessen wie du und alle.&#x201C; Das waren die letzten Worte, aber noch in
+                    seinen gebrochenen Augen war die feste, wenn auch nicht mehr stolze Überzeugung,
+                    daß er weiterhungre.</p>
+                <p>&#x201E;Nun macht aber Ordnung!&#x201C; sagte der Aufseher, und man begrub den
+                    Hungerkünstler samt dem Stroh. In den Käfig aber gab man einen jungen Panther.
+                    Es war eine selbst dem stumpfsten Sinn fühlbare Erholung, in dem so lange öden
+                    Käfig dieses wilde Tier sich herumwerfen zu sehn. Ihm fehlte nichts. Die
+                    Nahrung, die ihm schmeckte, brachten ihm ohne langes Nachdenken die Wächter;
+                    nicht einmal die Freiheit schien er zu vermissen; dieser edle, mit allem Nötigen
+                    bis knapp zum Zerreißen ausgestattete Körper schien auch die Freiheit mit sich
+                    herumzutragen; irgendwo im Gebiß schien sie zu stecken; und die Freude am Leben
+                    kam mit derart starker Glut aus seinem Rachen, daß es für die Zuschauer nicht
+                    leicht war, ihr standzuhalten. Aber sie überwanden sich, umdrängten den Käfig
+                    und wollten sich gar nicht fortrühren.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
