@@ -12,6 +12,7 @@ Installation Notes
 ------------------
 Requirements
 - PHP 7.3 or 7.4 (check with `php -v`)
+  PHP 8 doesn't work (due to "solarium/solarium": "^5.1")
 - composer (check with `composer -v`; if it is missing, see https://getcomposer.org/)
 - MySQL or MariaDB (for metadata storage)
 - Java 1.8 (for XSLT and Solr, check with `java -version`)
@@ -185,7 +186,7 @@ Refresh the source (this will fetch every persName / orgName / placeName with GN
 
 If we have a source with page facsimile as hinted by
 
-    `<classCode scheme="http://juedische-geschichte-online.net/doku/#genre">Quelle:Text</classCode>
+    <classCode scheme="http://juedische-geschichte-online.net/doku/#genre">Quelle:Text</classCode>
 
 We can now generate the tiles
 
