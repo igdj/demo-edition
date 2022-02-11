@@ -24,6 +24,8 @@ twig:
         locales: "%locales%"
         siteName: "kafka_ed"
         siteTagline: "A Demo Edition"
+        sitePublisher: 'Institute for the History of the German Jews'
+        siteContact: 'info@juedische-geschichte-online.net'
         slugify: "@cocur_slugify"
         webDir: "%kernel.project_dir%/web"
         piwikSiteId: "%piwik.site_id%"
