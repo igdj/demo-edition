@@ -114,7 +114,7 @@
         "ddeboer/data-import": "0.20.*",
         "phpoffice/phpexcel": "1.8.*",
 
-        "presta/sitemap-bundle": "^2.3",
+        "presta/sitemap-bundle": "^3.3",
         "eko/feedbundle": "^2.0",
 
         "igdj/tei-edition-bundle": "dev-solarium-6",

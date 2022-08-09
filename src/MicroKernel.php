@@ -108,7 +108,7 @@ extends Kernel
 
     public function getConfigDir()
     {
-        return $this->getProjectDir().'/config';
+        return $this->getProjectDir() . '/config';
     }
 
     /*
@@ -144,7 +144,7 @@ extends Kernel
         }
 
         // exports /sitemap.xml
-        $routes->mount('/', $routes->import('@PrestaSitemapBundle/Resources/config/routing.yml'));
+        $routes->mount('/', $routes->import('@PrestaSitemapBundle/config/routing.yml'));
 
         // Loading annotated routes from TeiEditionBundle
         $routes->mount('/', $routes->import('@TeiEditionBundle/Controller', 'annotation'));
