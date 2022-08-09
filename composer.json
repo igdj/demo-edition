@@ -8,7 +8,7 @@
     "minimum-stability": "dev",
     "repositories": [
         {
-            "url": "https://github.com/igdj/tei-edition-bundle",
+            "url": "https://github.com/burki/tei-edition-bundle",
             "type": "vcs"
         },
         {
@@ -28,14 +28,14 @@
             "type": "vcs"
         },
         {
-            "url": "https://github.com/boppy/SolrBundle.git",
+            "url": "https://github.com/burki/SolrBundle.git",
             "type": "vcs"
         },
         {
             "type": "package",
             "package": {
                 "name": "citation-style-language/locales",
-                "version":"1.0.0",
+                "version": "1.0.0",
                 "source": {
                     "type": "git",
                     "url": "https://github.com/citation-style-language/locales.git",
@@ -116,7 +116,7 @@
         "presta/sitemap-bundle": "^2.1",
         "eko/feedbundle": "^2.0",
 
-        "igdj/tei-edition-bundle": "@dev",
+        "igdj/tei-edition-bundle": "dev-solarium-6",
 
         "vnn/wordpress-rest-api-client": "^1.3",
         "guzzlehttp/guzzle": "^6.5"
