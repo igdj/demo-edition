@@ -7,6 +7,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use Symfony\Contracts\Translation\TranslatorInterface;
 
+use Doctrine\ORM\EntityManagerInterface;
+
 /**
  *
  */
@@ -20,9 +22,10 @@ extends \TeiEditionBundle\Controller\TopicController
      * @Route("/", name="home")
      */
     public function indexAction(Request $request,
+                                EntityManagerInterface $entityManager,
                                 TranslatorInterface $translator)
     {
-        list($markers, $bounds) = $this->buildMap($request->getLocale());
+        list($markers, $bounds) = $this->buildMap($entityManager, $request->getLocale());
 
         $news = [];
 

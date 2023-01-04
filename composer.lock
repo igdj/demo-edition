@@ -170,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/burki/SolrBundle.git",
-                "reference": "e270ad0ac55d2b590f9e454aa463324afb4dcd16"
+                "reference": "7db03b8e8ddf96b6feef5e03b185fb037cd4aa2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/burki/SolrBundle/zipball/e270ad0ac55d2b590f9e454aa463324afb4dcd16",
-                "reference": "e270ad0ac55d2b590f9e454aa463324afb4dcd16",
+                "url": "https://api.github.com/repos/burki/SolrBundle/zipball/7db03b8e8ddf96b6feef5e03b185fb037cd4aa2d",
+                "reference": "7db03b8e8ddf96b6feef5e03b185fb037cd4aa2d",
                 "shasum": ""
             },
             "require": {
@@ -185,10 +185,10 @@
                 "php": "^7.2|^8.0",
                 "ramsey/uuid": "^3.5",
                 "solarium/solarium": "^6.0",
-                "symfony/config": "^4.0|^5.0",
-                "symfony/dependency-injection": "^4.0|^5.0",
-                "symfony/doctrine-bridge": "^4.0|^5.0",
-                "symfony/http-kernel": "^4.0|^5.0"
+                "symfony/config": "^4.0|^5.0|^6.0",
+                "symfony/dependency-injection": "^4.0|^5.0|^6.0",
+                "symfony/doctrine-bridge": "^4.0|^5.0|^6.0",
+                "symfony/http-kernel": "^4.0|^5.0|^6.0"
             },
             "require-dev": {
                 "doctrine/orm": "^2.3",
@@ -217,7 +217,7 @@
             "support": {
                 "source": "https://github.com/burki/SolrBundle/tree/solarium-6"
             },
-            "time": "2022-11-09T13:44:58+00:00"
+            "time": "2023-01-04T14:07:34+00:00"
         },
         {
             "name": "brunty/relax-ng-domdocument",
@@ -2451,12 +2451,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/burki/tei-edition-bundle.git",
-                "reference": "b88db71a95dd87868e02c678b9c86c39d151f087"
+                "reference": "7055a06786d162836c33e0c8b6741eee4e7b7fd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/burki/tei-edition-bundle/zipball/b88db71a95dd87868e02c678b9c86c39d151f087",
-                "reference": "b88db71a95dd87868e02c678b9c86c39d151f087",
+                "url": "https://api.github.com/repos/burki/tei-edition-bundle/zipball/7055a06786d162836c33e0c8b6741eee4e7b7fd4",
+                "reference": "7055a06786d162836c33e0c8b6741eee4e7b7fd4",
                 "shasum": ""
             },
             "require": {
@@ -2526,7 +2526,7 @@
             "support": {
                 "source": "https://github.com/burki/tei-edition-bundle/tree/solarium-6"
             },
-            "time": "2022-11-09T13:43:31+00:00"
+            "time": "2023-01-04T16:38:46+00:00"
         },
         {
             "name": "jms/i18n-routing-bundle",
@@ -3325,21 +3325,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/burki/LiipUrlAutoConverterBundle.git",
-                "reference": "7b17a6fc871387903aeb890ee38b7adc100af915"
+                "reference": "3b1500cd177531876e77b1b235ccd04766ac5194"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/burki/LiipUrlAutoConverterBundle/zipball/7b17a6fc871387903aeb890ee38b7adc100af915",
-                "reference": "7b17a6fc871387903aeb890ee38b7adc100af915",
+                "url": "https://api.github.com/repos/burki/LiipUrlAutoConverterBundle/zipball/3b1500cd177531876e77b1b235ccd04766ac5194",
+                "reference": "3b1500cd177531876e77b1b235ccd04766ac5194",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0|^8.0",
-                "symfony/framework-bundle": "~3.0|~4.0|~5.0",
+                "symfony/framework-bundle": "~3.0|~4.0|~5.0|~6.0",
                 "twig/twig": "~1.43|~2.0|~3.0"
             },
             "require-dev": {
-                "symfony/symfony": "~2.3|~3.0|~4.0|~5.0"
+                "symfony/symfony": "~2.3|~3.0|~4.0|~5.0|~6.0"
             },
             "default-branch": true,
             "type": "symfony-bundle",
@@ -3374,7 +3374,7 @@
             "support": {
                 "source": "https://github.com/burki/LiipUrlAutoConverterBundle/tree/master"
             },
-            "time": "2022-11-09T13:40:36+00:00"
+            "time": "2023-01-04T14:20:29+00:00"
         },
         {
             "name": "minimalcode/search",
