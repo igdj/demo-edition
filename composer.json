@@ -8,28 +8,28 @@
     "minimum-stability": "dev",
     "repositories": [
         {
-            "url": "https://github.com/burki/tei-edition-bundle",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/burki/tei-edition-bundle"
         },
         {
-            "url": "https://github.com/igdj/lod-service",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/igdj/lod-service"
         },
         {
-            "url": "https://github.com/burki/converter.git",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/burki/converter.git"
         },
         {
-            "url": "https://github.com/burki/LibRIS.git",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/burki/LibRIS.git"
         },
         {
-            "url": "https://github.com/burki/LiipUrlAutoConverterBundle.git",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/burki/LiipUrlAutoConverterBundle.git"
         },
         {
-            "url": "https://github.com/burki/SolrBundle.git",
-            "type": "vcs"
+            "type": "vcs",
+            "url": "https://github.com/burki/SolrBundle.git"
         },
         {
             "type": "package",
@@ -82,9 +82,10 @@
         "symfony/form": "^5.4",
         "symfony/inflector": "^5.4",
         "symfony/serializer": "^5.4",
+
         "symfony/monolog-bundle": "^3.8",
         "symfony/monolog-bridge": "^5.4",
-        "symfony/swiftmailer-bundle": "^3.5",
+
         "knplabs/knp-menu-bundle": "^3.2",
 
         "symfony/asset": "^5.4",
