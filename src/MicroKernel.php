@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
-use Symfony\Component\Routing\RouteCollectionBuilder;
+use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 // see https://github.com/ikoene/symfony-micro
 class MicroKernel
@@ -38,7 +38,7 @@ extends Kernel
     /*
      * {@inheritDoc}
      */
-    public function registerBundles()
+    public function registerBundles() : iterable
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
@@ -94,17 +94,17 @@ extends Kernel
     }
 
     // see https://github.com/symfony/symfony-standard/blob/master/app/AppKernel.php
-    public function getCacheDir()
+    public function getCacheDir() : string
     {
         return $this->getProjectDir() . '/var/cache/' . $this->getEnvironment();
     }
 
-    public function getLogDir()
+    public function getLogDir() : string
     {
         return $this->getProjectDir() . '/var/logs';
     }
 
-    public function getConfigDir()
+    public function getConfigDir() : string
     {
         return $this->getProjectDir() . '/config';
     }
@@ -121,33 +121,27 @@ extends Kernel
     /*
      * {@inheritDoc}
      */
-    protected function configureRoutes(RouteCollectionBuilder $routes)
+    protected function configureRoutes(RoutingConfigurator $routes)
     {
         if (in_array($this->getEnvironment(), [ 'dev', 'test' ], true)) {
-            $routes->mount('/_wdt', $routes->import('@WebProfilerBundle/Resources/config/routing/wdt.xml'));
-            $routes->mount(
-                '/_profiler',
-                $routes->import('@WebProfilerBundle/Resources/config/routing/profiler.xml')
-            );
+            $routes->import('@WebProfilerBundle/Resources/config/routing/wdt.xml')->prefix('/_wdt');
+            $routes->import('@WebProfilerBundle/Resources/config/routing/profiler.xml')->prefix('/_profiler');
 
             // Preview error pages through /_error/{statusCode}
             //   see http://symfony.com/doc/current/cookbook/controller/error_pages.html
             // Note: not sure why this is mapped to /_error/_error/{code}.{_format} as can be seen by
             //   bin/console debug:router | grep error
             // -> _preview_error  ANY      ANY      ANY    /_error/_error/{code}.{_format}
-            $routes->mount(
-                '/_error',
-                $routes->import('@FrameworkBundle/Resources/config/routing/errors.xml')
-            );
+            $routes->import('@FrameworkBundle/Resources/config/routing/errors.xml')->prefix('/_error');
         }
 
         // exports /sitemap.xml
-        $routes->mount('/', $routes->import('@PrestaSitemapBundle/config/routing.yml'));
+        $routes->import('@PrestaSitemapBundle/config/routing.yml');
 
         // Loading annotated routes from TeiEditionBundle
-        $routes->mount('/', $routes->import('@TeiEditionBundle/Controller', 'annotation'));
+        $routes->import('@TeiEditionBundle/Controller', 'annotation');
 
         // App controllers
-        $routes->mount('/', $routes->import($this->getConfigDir().'/routes.yaml'));
+        $routes->import($this->getConfigDir() . '/routes.yaml');
     }
 }
