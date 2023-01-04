@@ -69,8 +69,8 @@ extends \TeiEditionBundle\Controller\RenderTeiController
      * @Route("/contact", name="contact")
      */
     public function renderAbout(Request $request,
-                                   TranslatorInterface $translator,
-                                   $title = null)
+                                TranslatorInterface $translator,
+                                $title = null)
     {
         return $this->renderTitleContent($request, 'About/sitetext.html.twig', $title);
     }

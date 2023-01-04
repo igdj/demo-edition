@@ -15,15 +15,6 @@ parameters:
     # is not needed
     # jms_i18n_routing.hosts.en:  127.0.0.1
 
-    # if you want to send mails from the contact page
-    mailer.transport: 'sendmail'
-    # if you don't have sendmail configured, you can use a smtp-host instead
-    # mailer.transport: 'smtp'
-    mailer.host: ~
-    mailer.port: ~
-    mailer.username: ~
-    mailer.password: ~
-
     # for testing (https://doi.test.datacite.org/), use
     app.datacite.url: "https://mds.test.datacite.org/"
     #app.datacite.url: "https://mds.datacite.org/"
