@@ -8,8 +8,8 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
-// see https://github.com/ikoene/symfony-micro
-class MicroKernel
+// see https://symfony.com/doc/current/configuration/micro_kernel_trait.html
+final class MicroKernel
 extends Kernel
 {
     /*
@@ -114,12 +114,17 @@ extends Kernel
      */
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        $loader->load($this->getProjectDir() . '/config/config_' . $this->getEnvironment() . '.yaml');
-        $loader->load($this->getProjectDir() . '/config/services.yaml');
+        $loader->load($this->getConfigDir() . '/config_' . $this->getEnvironment() . '.yaml');
+        $loader->load($this->getConfigDir() . '/services.yaml');
     }
 
     /*
      * {@inheritDoc}
+     *
+     * use
+     *      bin/console debug:router
+     * to show all your routes
+     *
      */
     protected function configureRoutes(RoutingConfigurator $routes)
     {
@@ -132,7 +137,7 @@ extends Kernel
             // Note: not sure why this is mapped to /_error/_error/{code}.{_format} as can be seen by
             //   bin/console debug:router | grep error
             // -> _preview_error  ANY      ANY      ANY    /_error/_error/{code}.{_format}
-            $routes->import('@FrameworkBundle/Resources/config/routing/errors.xml')->prefix('/_error');
+   $routes->import('@FrameworkBundle/Resources/config/routing/errors.xml')->prefix('/_error');
         }
 
         // exports /sitemap.xml
