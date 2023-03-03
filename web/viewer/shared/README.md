@@ -11,8 +11,8 @@ and Node.js. After checking it out, you can run
 
     mvn package
 
-Pre-built packages can be downloaded from https://search.maven.org/artifact/org.mycore/mycore-viewer, e.g  mycore-viewer-2018.06.0.4.
-
+Pre-built packages can be downloaded from https://central.sonatype.com/artifact/org.mycore/mycore-viewer/2018.06.0.4/versions
+(e.g. https://repo1.maven.org/maven2/org/mycore/mycore-viewer/2018.06.0.4/mycore-viewer-2018.06.0.4.jar)
 You can rename it to mycore-viewer-2018.06.0.4.zip and then extract META-INF/resources/modules/iview2 into the current directory.
 
 iview2-i18n contains the translations as set in the viewer-configuration through:
@@ -29,7 +29,7 @@ and
 
 Alternatively, you can build them from or convert from message_de.properties and message_en.properties in
 
-    https://github.com/MyCoRe-Org/mycore/tree/master/mycore-viewer/src/main/resources/components/viewer/config
+    https://github.com/MyCoRe-Org/mycore/tree/main/mycore-viewer/src/main/resources/components/viewer/config
 
 The only change currently needed to make iview2 work on this site is an adjustment of the hardwired path used for HTML-renditions of the individual pages in the TEI-files:
 
