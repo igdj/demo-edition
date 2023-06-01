@@ -1,5 +1,5 @@
 <?php
-// src/App/Menu/Builder.php
+// src/Menu/Builder.php
 
 // see http://symfony.com/doc/current/bundles/KnpMenuBundle/index.html
 namespace App\Menu;
