@@ -15,6 +15,8 @@ parameters:
     # is not needed
     # jms_i18n_routing.hosts.en:  127.0.0.1
 
+    app.public_dir: "%kernel.project_dir%/web"
+
     # for testing (https://doi.test.datacite.org/), use
     app.datacite.url: "https://mds.test.datacite.org/"
     #app.datacite.url: "https://mds.datacite.org/"
