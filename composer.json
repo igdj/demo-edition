@@ -34,18 +34,6 @@
         {
             "type": "package",
             "package": {
-                "name": "citation-style-language/locales",
-                "version": "1.0.0",
-                "source": {
-                    "type": "git",
-                    "url": "https://github.com/citation-style-language/locales.git",
-                    "reference": "master"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "citation-style-language/styles-distribution",
                 "version":"1.0.0",
                 "source": {
@@ -57,6 +45,11 @@
         }
     ],
     "require": {
+        "php": "^7.3|^8.1",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "ext-intl": "*",
+
         "symfony/yaml": "^5.4",
         "symfony/config": "^5.4",
         "symfony/expression-language": "^5.4",
