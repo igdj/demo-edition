@@ -45,6 +45,11 @@
         }
     ],
     "require": {
+        "php": "^7.3|^8.1",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "ext-intl": "*",
+
         "symfony/yaml": "^5.4",
         "symfony/config": "^5.4",
         "symfony/expression-language": "^5.4",
