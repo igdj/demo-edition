@@ -17,19 +17,19 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/burki/converter.git"
+            "url": "https://github.com/burki/converter"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/burki/LibRIS.git"
+            "url": "https://github.com/burki/LibRIS"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/burki/LiipUrlAutoConverterBundle.git"
+            "url": "https://github.com/burki/LiipUrlAutoConverterBundle"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/burki/SolrBundle.git"
+            "url": "https://github.com/burki/SolrBundle"
         },
         {
             "type": "package",
@@ -45,11 +45,6 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.1",
-        "ext-ctype": "*",
-        "ext-iconv": "*",
-        "ext-intl": "*",
-
         "symfony/yaml": "^5.4",
         "symfony/config": "^5.4",
         "symfony/expression-language": "^5.4",
