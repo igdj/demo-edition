@@ -42,7 +42,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
             <div n="2">
                 <p>Diese Anwendung demonstriert den Einsatz der für die Hamburger Schlüsseldokumente
                     entwickelten nutzerfreundlichen Publikationsumgebung für <ref
-                        target="https://juedische-geschichte-online.net/ueber/technische-umsetzung"
+                        target="https://schluesseldokumente.net/ueber/technische-umsetzung"
                         >TEI-basierte Quelleneditionen</ref>.</p>
                 <p>Der Quellcode steht <ref target="https://github.com/igdj/">auf GitHub</ref> zur Verfügung.</p>
                 <p>Die Entwicklung wurde von der <ref

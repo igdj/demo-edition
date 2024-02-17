@@ -6,13 +6,12 @@ This is an edition for documentation purposes demonstrating the use of
 
 You may use it in parts or adjust it to your own need if it fits your needs.
 If you have any questions or find this code helpful, please contact us at
-    http://jewish-history-online.net/contact
+    http://keydocuments.net/contact
 
 Installation Notes
 ------------------
 Requirements
-- PHP 7.3 or 7.4 (check with `php -v`)
-  PHP 8 doesn't work yet (due to "solarium/solarium": "^5.1")
+- PHP >= 7.3 (check with `php -v`)
 - composer (check with `composer -v`; if it is missing, see https://getcomposer.org/)
 - MySQL or MariaDB (for metadata storage)
 - Java 1.8 (for XSLT and Solr, check with `java -version`)
@@ -156,7 +155,7 @@ described in https://symfony.com/doc/3.4/setup/file_permissions.html
 ### Troubleshooting
 
 If you experience any issues, please contact us:
-    https://jewish-history-online.net/contact
+    https://keydocuments.net/contact
 
 We are looking forward to work this through step by step or provide you
 with a preconfigured VirtualBox.
@@ -234,7 +233,7 @@ to the font files used.
 
 License
 -------
-    (C) 2021-2022 Institut für die Geschichte der deutschen Juden,
+    (C) 2021-2024 Institut für die Geschichte der deutschen Juden,
         Daniel Burckhardt
 
 

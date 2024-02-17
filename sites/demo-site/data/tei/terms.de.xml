@@ -29,7 +29,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"?>
     </teiHeader>
     <text>
         <body>
-            <p>Diese Demo-Anwendung wurde vom <ref target="http://igdj-hh.de/">Institut für die Geschichte der deutschen Juden
+            <p>Diese Demo-Anwendung wurde am <ref target="https://igdj-hh.de/">Institut für die Geschichte der deutschen Juden
                 (IGdJ)</ref> entwickelt.
             </p>
             <p>Der Quellcode steht <ref target="https://github.com/igdj/">auf GitHub</ref> zur Verfügung.</p>
